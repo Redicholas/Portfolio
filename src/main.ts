@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 
 const portfolioItemsDiv: HTMLDivElement | null = document.querySelector('#portfolioItems');
 
