@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+i {
+  font-size: x-large;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Comfortaa', 'sans';
+}
+
+p {
+  font-family: 'Red Hat Text', 'sans';
+}
