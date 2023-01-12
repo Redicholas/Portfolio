@@ -9,9 +9,12 @@ i {
 h1,
 h2,
 h3 {
-  font-family: 'Comfortaa', 'sans';
+  font-family: "Jost", "sans";
+  font-weight: 600;
+  font-style: italic;
 }
 
 p {
-  font-family: 'Red Hat Text', 'sans';
+  font-family: "Jost", "sans";
+  font-weight: 300;
 }

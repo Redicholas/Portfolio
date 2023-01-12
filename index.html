@@ -10,8 +10,7 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Red+Hat+Text:wght@300;400;700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;1,600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="src/style.css">
   </head>
   
     <body class="tracking-widest leading-6 bg-darkGreen text-white">
@@ -31,11 +30,11 @@
         </ul>
       </nav>
     </header>
-    <section class="p-8 pt-12 sm:pt-48 max-w-lg mx-auto">
+    <section class="p-8 pt-12 sm:pt-36 max-w-xl mx-auto">
       <h1 class="text-4xl sm:text-6xl pt-2 mt-20">
         Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
       </h1>
-      <img src="/img/blob-haikei.svg" class="hidden sm:block ">
+      <img src="/img/blob-haikei.svg" class="hidden sm:block absolute -z-10 right-auto left-1/2 bottom-1/2">
       <h2 class="pt-8 text-2xl max-w-md">
         Creating intuitive and accessible websites
       </h2>
@@ -56,9 +55,16 @@
         always eager to learn and grow as a developer.
       </p>
       <h3 class="text-center text-xl">My CV</h3>
-      <a href="/img/CV-Nicholas-Peters.pdf" class="">
-        <img src="/img/cv-img.png" alt="My Cv" class="h-32 rounded m-auto " />
-      </a>
+      <img src="/img/cv-img.png" alt="My Cv" id="cvThumbnail" class="rounded m-auto cursor-zoom-in"
+      height="100" width="100" />
+      <div class="fixed left-1/4 top-32 z-10 hidden" id="cvModal">
+        <div class="flex align-center p-2 justify-between bg-black">
+          <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-fire text-4xl"></i></button>
+          <a href="/img/CV-Nicholas-Peters.pdf" class="font-bold pt-2">PDF Link</a>
+        </div>
+        <img src="/img/cv-zoomed.png" alt="My Cv" class=""
+        height="800" width="500" />
+      </div>
       <div class="bg-darkGreen my-20 p-8 rounded-xl max-w-xl mx-auto">
         <h3 class="text-center text-xl mb-2">Technologies</h3>
         <div class="text-center flex justify-around">
@@ -82,11 +88,13 @@
       <h2 class="text-center text-2xl sm:text-4xl mb-4">
         Some of my work so far.
       </h2>
-      <div id="portfolioItems" class="flex flex-col justify-center p-8 sm:grid grid-cols-3 gap-6 max-w-4xl mx-auto">
-        
+      <div id="portfolioItems" 
+        class="flex flex-col justify-center p-8 
+        sm:grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <!-- Rendered by TS -->
       </div>
     </section>
-    <section class="p-10  bg-gradient-to-b from-middleGreen to-darkGreen" id="contact">
+    <section class="p-10 bg-gradient-to-b from-middleGreen to-darkGreen" id="contact">
       <h2 class="text-center text-2xl sm:text-4xl mb-4">Talk to me.</h2>
       <div class="flex justify-center">
         <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2"></i>
