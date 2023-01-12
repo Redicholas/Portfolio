@@ -26,7 +26,7 @@ const portfolioItems = [
     link: 'https://redicholas.github.io/Doer/', 
   },
   {
-    title: 'KaffeHornet',
+    title: 'Kaffe Hörnet',
     description: 'This is a group project for Medieinstitutet. <br> A semi-functional webshop.',
     imageUrl: './img/kaffeHornet.png',
     imgAlt: 'image of my coffee corner website',
@@ -46,8 +46,9 @@ function showPortfolioItems() {
     const { title, description, imageUrl, imgAlt, link } = portfolioItem;
     if (portfolioItemsDiv != null) { 
       portfolioItemsDiv.innerHTML += `
-      <div class="rounded-xl mb-10 p-8 shadow hover:shadow-none shadow-black transition-all 
-      bg-gradient-to-t from-middleGreen text-sm border border-transparentBlack">
+      <div class="rounded-xl max-w-md mx-auto mb-10 p-8 shadow hover:shadow-none shadow-transparentBlack transition-all 
+      border border-transparentBlack">
+        <h3 class="text-center mb-2 text-lg">${title}</h3>
           <a
             href="${link}"
             loading="lazy"
@@ -56,10 +57,10 @@ function showPortfolioItems() {
             class=""
           >
           <img src="${imageUrl}" alt="${imgAlt}" 
-          class="rounded-xl m-auto mb-8 w-full"
+          class="rounded-xl m-auto mb-8 w-full max-w-sm"
           height="100" width="100">
         </a>
-        <p class="text-center">${description}</p>
+        <p class="text-center text-sm">${description}</p>
       </div>
       `;
     }});
