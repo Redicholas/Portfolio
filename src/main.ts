@@ -7,13 +7,13 @@ const cvModal: HTMLDivElement | null = document.querySelector('#cvModal');
 
 function showCvModal() {
   if (cvModal != null) {
-    cvModal.classList.remove('hidden');
+    cvModal.classList.replace('hidden', 'flex');
   }
 }
 
 function closeCvModal() {
   if (cvModal != null) {
-    cvModal.classList.add('hidden');
+    cvModal.classList.replace('flex', 'hidden');
   }
 }
 
@@ -48,7 +48,7 @@ function showPortfolioItems() {
       portfolioItemsDiv.innerHTML += `
       <div class="rounded-xl max-w-md mx-auto mb-10 p-8 shadow hover:shadow-none shadow-transparentBlack transition-all 
       border border-transparentBlack">
-        <h3 class="text-center mb-2 text-lg">${title}</h3>
+        <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
           <a
             href="${link}"
             loading="lazy"

@@ -17,7 +17,7 @@
     <body class="tracking-widest leading-6 text-blue1">
 
     <header class="w-screen" id="header">
-      <nav class="fixed bottom-3 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
+      <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
         <div class="flex justify-center items-center p-1 px-4 rounded-full bg-white border border-transparentBlack mx-auto shadow-md shadow-transparentBlack">
           <a href="#header" class="m-1 transition-all hover:text-fire">Home</a>
           <a href="#about" class="m-1 transition-all hover:text-fire">About</a>
@@ -31,11 +31,11 @@
     </header>
 
     <section class="p-8 sm:pt-20 max-w-xl mx-auto">
-      <div class="flex mt-8 sm:mt-20 justify-between items-center">
+      <div class="flex sm:mt-20 justify-between items-center">
         <h1 class="text-3xl sm:text-6xl">
           Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
         </h1>
-        <img src="img/nicholas-peters.png" alt="Profile Image" class="h-36 rounded-xl mx-4" />
+        <img src="img/nicholas-bw.png" alt="Profile Image" class="h-28 sm:h-40 rounded-full" />
       </div>
       <h2 class="pt-8 text-xl sm:text-2xl max-w-md">
         Creating intuitive and accessible web experiences
@@ -57,15 +57,18 @@
       </p>
 
       <!-- CV Thumbnail -->
-      <h3 class="text-center text-xl">My CV</h3>
-      <img src="/img/cv-img.png" alt="My Cv" id="cvThumbnail" class="rounded m-auto cursor-zoom-in"
-      height="100" width="100" />
-
+      <div class="mx-auto flex flex-col justify-center items-center">
+        <h3 class="text-center text-xl">My CV</h3>
+        <button id="cvThumbnail">
+          <img src="/img/cv-img.png" alt="My Cv" class="rounded cursor-zoom-in"
+          height="100" width="100" />
+        </button>
+      </div>
       <!-- CV Modal -->
-      <div class="hidden fixed z-30 top-0 h-screen w-screen bg-transparentBlack flex flex-col justify-center items-center" id="cvModal">
-        <div class="flex align-center mt-12 w-64 py-2 px-8 justify-between rounded-t-3xl bg-black text-white">
-          <a href="/img/CV-Nicholas-Peters.pdf" class="font-bold pt-2">PDF Link</a>
-          <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-fire text-4xl"></i></button>
+      <div class="hidden fixed z-30 top-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
+        <div class="flex align-center mt-12 w-64 px-8 justify-between rounded-t-xl bg-black text-white">
+          <a href="/img/CV-Nicholas-Peters.pdf" class="underline pt-2 hover:text-fire">PDF Link</a>
+          <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-fire text-4xl"></i></button>
         </div>
         <img src="/img/cv-zoomed.png" alt="My Cv" class="rounded-xl"
         height="800" width="500" />
@@ -102,14 +105,14 @@
       </div>
     </section>
     <!-- Contact -->
-    <section class="p-10" id="contact">
+    <section class="p-10 mb-20" id="contact">
       <h2 class="text-center text-2xl sm:text-4xl mb-4">Talk to me.</h2>
       <div class="flex justify-center">
-        <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2"></i>
-        <a href="https://github.com/Redicholas"><i class="fa-brands fa-github p-2"></i></a>
+        <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2 hover:text-fire transition-all"></i>
+        <a href="https://github.com/Redicholas"><i class="fa-brands fa-github p-2 hover:text-fire transition-all"></i></a>
         <a href="https://www.linkedin.com/in/nicholas-peters-1b0b42176/"
-          ><i class="fa-brands fa-linkedin p-2"></i></a>
-        <a href="https://goo.gl/maps/ejcEqp13YJfBaLH86"><i class="fa-solid fa-location-dot p-2"></i></a>
+          ><i class="fa-brands fa-linkedin p-2 hover:text-fire transition-all"></i></a>
+        <a href="https://goo.gl/maps/ejcEqp13YJfBaLH86"><i class="fa-solid fa-location-dot p-2 hover:text-fire transition-all"></i></a>
       </div>
       <p class="text-center">peters.nicholas@gmail.com</p>
     </section>
