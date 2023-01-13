@@ -5,6 +5,24 @@ const cvThumbnail: HTMLImageElement | null = document.querySelector('#cvThumbnai
 const closeCvModalBtn: HTMLButtonElement | null = document.querySelector('#closeCvModalBtn');
 const cvModal: HTMLDivElement | null = document.querySelector('#cvModal');
 
+const hiddenElements = document.querySelectorAll('.appear');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('invisible');
+      entry.target.classList.add('tracking-in-expand');
+    } else {
+      entry.target.classList.add('invisible');
+      entry.target.classList.remove('tracking-in-expand');
+    }
+  });
+});
+
+hiddenElements.forEach((element) => {
+  observer.observe(element);
+});
+
 function showCvModal() {
   if (cvModal != null) {
     cvModal.classList.replace('hidden', 'flex');
