@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="src/style.css">
   </head>
   
-    <body class="tracking-widest leading-6 text-blue1">
+    <body class="tracking-widest leading-6 text-blue1 bg-powderBlue ">
 
+    <!--  Nav  -->
     <header class="w-screen" id="header">
       <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
-        <div class="flex justify-center items-center p-1 px-4 rounded-full bg-white border border-transparentBlack mx-auto shadow-md shadow-transparentBlack">
+        <div class="flex justify-center items-center p-1 px-4 rounded-full bg-powderBlue border border-white mx-auto shadow-md shadow-transparentBlack">
           <a href="#header" class="m-1 transition-all hover:text-fire">Home</a>
           <a href="#about" class="m-1 transition-all hover:text-fire">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
-          class="h-20 w-20 sm:h-32 sm:w-32 hover:h-48 hover:w-48 transition-all
+          class="h-20 w-20 sm:h-32 sm:w-32 hover:h-48 sm:hover:w-48 transition-all
           duration-1000 ">
           <a href="#work" class="m-1 transition-all hover:text-fire">Work</a>
           <a href="#contact" class="m-1 transition-all hover:text-fire">Contact</a>
@@ -30,18 +31,21 @@
       </nav>
     </header>
 
-    <section class="p-8 sm:pt-20 max-w-xl mx-auto">
+    <!-- Hero -->
+    <section class="p-8 sm:pt-20 max-w-fit mx-auto">
       <div class="flex sm:mt-20 justify-between items-center">
-        <h1 class="text-3xl sm:text-6xl">
+        <h1 class="text-3xl sm:text-6xl [text-shadow:_2px_2px_0_rgb(255_255_255_/_40%)]
+        textAppear invisible">
           Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
         </h1>
-        <img src="img/nicholas-bw.png" alt="Profile Image" class="h-28 sm:h-40 rounded-full" />
+        <img src="img/nicholas-bw.png" alt="Profile Image" class="h-36 sm:h-56 rounded-full -z-10 opacity-80" />
       </div>
-      <h2 class="pt-8 text-xl sm:text-2xl max-w-md">
+      <h2 class="pt-8 text-xl sm:text-2xl max-w-md [text-shadow:_1px_1px_0_rgb(255_255_255_/_40%)]">
         Creating intuitive and accessible web experiences
       </h2>
     </section>
 
+    <!-- About -->
     <section class="py-12 " id="about">
       <h2 class="text-center text-2xl sm:text-4xl mb-4">A little about me.</h2>
       <p class="px-8 sm:px-0 py-8 max-w-xl mx-auto">
@@ -64,14 +68,15 @@
           height="100" width="100" />
         </button>
       </div>
+
       <!-- CV Modal -->
       <div class="hidden fixed z-30 top-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
-        <div class="flex align-center mt-12 w-64 px-8 justify-between rounded-t-xl bg-black text-white">
+        <div class="flex align-center mt-2 w-64 px-8 justify-between rounded-t-xl bg-blue1 text-white">
           <a href="/img/CV-Nicholas-Peters.pdf" class="underline pt-2 hover:text-fire">PDF Link</a>
           <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-fire text-4xl"></i></button>
         </div>
         <img src="/img/cv-zoomed.png" alt="My Cv" class="rounded-xl"
-        height="800" width="500" />
+        height="600" width="480" />
       </div>
 
       <!-- Technologies -->
@@ -82,7 +87,7 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>SCSS</li>
+            <li>Sass</li>
           </ul>
           <ul>
             <li>TypeScript</li>
@@ -93,9 +98,10 @@
         </div>
       </div>
     </section>
+
     <!-- Work -->
     <section class="" id="work">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4">
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
         Some of my work so far.
       </h2>
       <div id="portfolioItems" 
@@ -104,9 +110,10 @@
         <!-- Rendered by TS -->
       </div>
     </section>
+
     <!-- Contact -->
     <section class="p-10 mb-20" id="contact">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4">Talk to me.</h2>
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 invisible textAppear">Talk to me.</h2>
       <div class="flex justify-center">
         <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2 hover:text-fire transition-all"></i>
         <a href="https://github.com/Redicholas"><i class="fa-brands fa-github p-2 hover:text-fire transition-all"></i></a>

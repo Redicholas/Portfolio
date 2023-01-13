@@ -5,6 +5,30 @@ const cvThumbnail: HTMLImageElement | null = document.querySelector('#cvThumbnai
 const closeCvModalBtn: HTMLButtonElement | null = document.querySelector('#closeCvModalBtn');
 const cvModal: HTMLDivElement | null = document.querySelector('#cvModal');
 
+const portfolioItems = [
+  {
+    title: 'Doer',
+    description: 'HTML | Tailwind CSS | TypeScript | Vite',
+    imageUrl: '/img/Doer.png',
+    imgAlt: 'image of my todo list app',
+    link: 'https://redicholas.github.io/Doer/', 
+  },
+  {
+    title: 'Kaffe Hörnet',
+    description: 'HTML | Sass | JavaScript | Vite',
+    imageUrl: './img/kaffeHornet.png',
+    imgAlt: 'image of my coffee corner website',
+    link: 'https://redicholas.github.io/KaffeHornet/',
+  },
+  {
+    title: 'To the Moon',
+    description: 'HTML | CSS',
+    imageUrl: '../img/to-the-moon.png',
+    imgAlt: 'image of my space ventures website',
+    link: 'https://github.com/Redicholas/space-ventures',
+  },
+];
+
 function showCvModal() {
   if (cvModal != null) {
     cvModal.classList.replace('hidden', 'flex');
@@ -17,37 +41,13 @@ function closeCvModal() {
   }
 }
 
-const portfolioItems = [
-  {
-    title: 'Doer',
-    description: 'My todo list app. Made with Tailwind and TypeScript.',
-    imageUrl: '/img/Doer.png',
-    imgAlt: 'image of my todo list app',
-    link: 'https://redicholas.github.io/Doer/', 
-  },
-  {
-    title: 'Kaffe Hörnet',
-    description: 'This is a group project for Medieinstitutet. <br> A semi-functional webshop.',
-    imageUrl: './img/kaffeHornet.png',
-    imgAlt: 'image of my coffee corner website',
-    link: 'https://redicholas.github.io/KaffeHornet/',
-  },
-  {
-    title: 'To the Moon',
-    description: 'My first project for Medieinstitutet. HTML & CSS',
-    imageUrl: '../img/to-the-moon.png',
-    imgAlt: 'image of my space ventures website',
-    link: 'https://github.com/Redicholas/space-ventures',
-  },
-];
-
 function showPortfolioItems() {
   portfolioItems.forEach((portfolioItem) => {
     const { title, description, imageUrl, imgAlt, link } = portfolioItem;
     if (portfolioItemsDiv != null) { 
       portfolioItemsDiv.innerHTML += `
-      <div class="rounded-xl max-w-md mx-auto mb-10 p-8 shadow hover:shadow-none shadow-transparentBlack transition-all 
-      border border-transparentBlack">
+      <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-white sm:hover:shadow-none transition-all 
+       neumorphic">
         <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
           <a
             href="${link}"
@@ -57,7 +57,7 @@ function showPortfolioItems() {
             class=""
           >
           <img src="${imageUrl}" alt="${imgAlt}" 
-          class="rounded-xl m-auto mb-8 w-full max-w-sm"
+          class="rounded-xl m-auto mb-4 w-full max-w-xs"
           height="100" width="100">
         </a>
         <p class="text-center text-sm">${description}</p>
@@ -65,6 +65,23 @@ function showPortfolioItems() {
       `;
     }});
 }
+
+const hiddenText = document.querySelectorAll('.textAppear');
+const textObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('invisible');
+      entry.target.classList.add('tracking-in-expand');
+    } else {
+      entry.target.classList.add('invisible');
+      entry.target.classList.remove('tracking-in-expand');
+    }
+  });
+});
+
+hiddenText.forEach((element) => {
+  textObserver.observe(element);
+});
 
 showPortfolioItems();
 cvThumbnail?.addEventListener('click', showCvModal);
