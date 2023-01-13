@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 i {
   font-size: x-large;
 }
@@ -17,6 +21,12 @@ h3 {
 p {
   font-family: "Jost", "sans";
   font-weight: 300;
+}
+
+.neumorphic {
+  border-radius: 20px;
+  background: #bbd6e2;
+  box-shadow: 10px 10px 30px #9fb6c0, -10px -10px 30px #d7f6ff;
 }
 
 .tracking-in-expand {
