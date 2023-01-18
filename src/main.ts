@@ -14,7 +14,7 @@ const portfolioItems = [
     link: 'https://redicholas.github.io/Doer/', 
   },
   {
-    title: 'Kaffe Hörnet',
+    title: 'KaffeHörnet',
     description: 'HTML | Sass | JavaScript | Vite',
     imageUrl: './img/kaffeHornet.png',
     imgAlt: 'image of my coffee corner website',
@@ -46,7 +46,7 @@ function showPortfolioItems() {
     const { title, description, imageUrl, imgAlt, link } = portfolioItem;
     if (portfolioItemsDiv != null) { 
       portfolioItemsDiv.innerHTML += `
-      <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-white sm:hover:shadow-none transition-all 
+      <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-white sm:hover:shadow-none sm:hover:bg-lightGrey transition-all 
        neumorphic">
         <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
           <a
@@ -57,7 +57,7 @@ function showPortfolioItems() {
             class=""
           >
           <img src="${imageUrl}" alt="${imgAlt}" 
-          class="rounded-xl m-auto mb-4 w-full max-w-xs"
+          class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
           height="100" width="100">
         </a>
         <p class="text-center text-sm">${description}</p>
@@ -72,9 +72,6 @@ const textObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove('invisible');
       entry.target.classList.add('tracking-in-expand');
-    } else {
-      entry.target.classList.add('invisible');
-      entry.target.classList.remove('tracking-in-expand');
     }
   });
 });
