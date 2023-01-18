@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .shine {
+    background: linear-gradient(
+      90deg,
+      #020e26 0%,
+      #40dde6 70%,
+      #fff 75%,
+      #579be4 80%,
+      #020e26 90%
+    );
+    background-size: 300% auto;
+
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 12s linear infinite;
+  }
+}
+
 * {
   scroll-behavior: smooth;
 }
