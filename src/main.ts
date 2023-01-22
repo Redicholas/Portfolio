@@ -1,5 +1,8 @@
 import './style.css';
 
+const html = document.documentElement;
+const darkLightBtn: HTMLButtonElement | null = document.querySelector('#darkLight');
+const darkLightIcon = document.querySelector('#darkLightIcon');
 const portfolioItemsDiv: HTMLDivElement | null = document.querySelector('#portfolioItems');
 const cvThumbnail: HTMLImageElement | null = document.querySelector('#cvThumbnail');
 const closeCvModalBtn: HTMLButtonElement | null = document.querySelector('#closeCvModalBtn');
@@ -29,6 +32,12 @@ const portfolioItems = [
   },
 ];
 
+function toggleDarkLight() {
+  if (html != null) {
+    html.classList.toggle('dark');
+  }
+}
+
 function showCvModal() {
   if (cvModal != null) {
     cvModal.classList.replace('hidden', 'flex');
@@ -46,22 +55,21 @@ function showPortfolioItems() {
     const { title, description, imageUrl, imgAlt, link } = portfolioItem;
     if (portfolioItemsDiv != null) { 
       portfolioItemsDiv.innerHTML += `
-      <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-white sm:hover:shadow-none sm:hover:bg-lightGrey transition-all 
-       neumorphic">
-        <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
-          <a
-            href="${link}"
-            loading="lazy"
-            title="${title}"
-            target="_blank"
-            class=""
-          >
-          <img src="${imageUrl}" alt="${imgAlt}" 
-          class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
-          height="100" width="100">
-        </a>
-        <p class="text-center text-sm">${description}</p>
-      </div>
+      <a
+        href="${link}"
+        loading="lazy"
+        title="${title}"
+        target="_blank">
+        <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-transparentBlack
+         sm:hover:shadow-none sm:hover:bg-transparentBlack transition-all
+          dark:hover:bg-[#232A30]">
+          <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
+            <img src="${imageUrl}" alt="${imgAlt}" 
+            class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
+            height="100" width="100">
+            <p class="text-center text-sm">${description}</p>
+        </div>
+      </a>
       `;
     }});
 }
@@ -81,5 +89,6 @@ hiddenText.forEach((element) => {
 });
 
 showPortfolioItems();
+darkLightBtn?.addEventListener('click', toggleDarkLight);
 cvThumbnail?.addEventListener('click', showCvModal);
 closeCvModalBtn?.addEventListener('click', closeCvModal);

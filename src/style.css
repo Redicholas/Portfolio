@@ -55,7 +55,6 @@ p {
     90deg,
     #020e26 0%,
     #40dde6 70%,
-    #fff 75%,
     #579be4 80%,
     #020e26 90%
   );
@@ -66,7 +65,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: shine 12s linear infinite;
+  animation: shine 20s linear infinite;
 }
 
 @keyframes shine {
