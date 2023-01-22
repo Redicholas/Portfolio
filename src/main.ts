@@ -2,7 +2,6 @@ import './style.css';
 
 const html = document.documentElement;
 const darkLightBtn: HTMLButtonElement | null = document.querySelector('#darkLight');
-const darkLightIcon = document.querySelector('#darkLightIcon');
 const portfolioItemsDiv: HTMLDivElement | null = document.querySelector('#portfolioItems');
 const cvThumbnail: HTMLImageElement | null = document.querySelector('#cvThumbnail');
 const closeCvModalBtn: HTMLButtonElement | null = document.querySelector('#closeCvModalBtn');
