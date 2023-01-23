@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
@@ -17,8 +17,7 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;1,600&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="src/style.css">
     <title>Nicholas Peters Portfolio</title>
   </head>
   
@@ -42,39 +41,41 @@
     </header>
 
     <!-- Hero -->
-    <section class="p-8 sm:pt-20 max-w-fit mx-auto">
-      <div class="flex sm:mt-20 justify-between items-center">
-        <h1 id="heading" class="text-3xl sm:text-6xl
-        textAppear invisible">
-          Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
-        </h1>
-        <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" class="h-36 sm:h-56 rounded-full -z-10 opacity-80" loading="lazy" />
-      </div>
-      <h2 class="pt-8 text-xl sm:text-2xl max-w-md">
-        Creating intuitive and accessible web experiences
-      </h2>
-    </section>
+    <div class="flex flex-col xl:flex-row sm:min-h-screen gap-4 items-center justify-center">
+      <section class="p-8 sm:pt-20 max-w-fit mx-auto">
+        <div class="flex sm:mt-20 justify-between items-center flex-col xl:gap-4">
+          <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl
+          textAppear invisible">
+            Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
+          </h1>
+          <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" 
+            class="h-36 sm:h-56 xl:h-72 rounded-full -z-10 opacity-80" 
+            loading="lazy" />
+        </div>
+        <!-- <h2 class="pt-8 text-xl sm:text-2xl max-w-md">
+          Creating intuitive and accessible web experiences
+        </h2> -->
+      </section>
 
-    <!-- About -->
-    <section class="py-12 " id="about">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4">A little about me.</h2>
-      <p class="px-8 sm:px-0 py-8 max-w-xl mx-auto">
-        Hi there! <br />
-        My name is Nicholas Peters. I am an aspiring front-end developer
-        currently studying at Medieinstitutet in Sweden. I am excited to start
-        my first apprenticeship in the autumn of 2023 and gain hands-on
-        experience in the field. My ultimate goal is to find a medium-sized web
-        agency that specializes in React, but I am open to exploring different
-        opportunities and expanding my skillset. If you have any recommendations
-        or would like to get in touch, please don't hesitate to reach out. I am
-        always eager to learn and grow as a developer.
-      </p>
+      <!-- About -->
+      <section class="xl:mt-36 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
+        <h2 class="text-center text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
+        <p class=" xl:text-xl">
+          Hello there! <br />
+          I'm Nicholas Peters. I'm a future front-end developer who's currently attending Medieinstitutet in Sweden. 
+          In the fall of 2023, I'm looking forward to beginning my first period of apprenticeship and getting some practical work experience. 
+          I'm always keen to learn new technologies and improve as a developer.
+          Please do not hesitate to get in touch if you have any recommendations or would want to contact me for an idea. 
+        </p>
+        <a href="#contact"><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
+    </div>
 
       <!-- CV Thumbnail -->
+      <section class="xl:flex">
       <div class="mx-auto flex flex-col justify-center items-center">
-        <h3 class="text-center text-xl">My CV</h3>
+        <h3 class="text-center text-xl xl:text-4xl xl:mb-12">My CV</h3>
         <button id="cvThumbnail">
-          <img src="/img/cv-img.png" alt="My Cv" class="rounded cursor-zoom-in"
+          <img src="/img/cv-img.png" alt="My Cv" class="rounded cursor-zoom-in xl:w-36"
           height="100" width="100" />
         </button>
       </div>
@@ -90,9 +91,9 @@
       </div>
 
       <!-- Technologies -->
-      <div class="my-16 p-8 rounded-xl max-w-xl mx-auto">
-        <h3 class="text-center text-xl mb-2">Technologies</h3>
-        <div class="text-center flex justify-around">
+      <div class="my-16 p-8 rounded-xl max-w-xl mx-auto ">
+        <h3 class="text-center text-xl mb-2 xl:text-4xl xl:mb-12">Technologies</h3>
+        <div class="text-center flex justify-around gap-24 xl:text-2xl">
           <ul>
             <li>HTML</li>
             <li>CSS</li>
