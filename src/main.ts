@@ -9,6 +9,13 @@ const cvModal: HTMLDivElement | null = document.querySelector('#cvModal');
 
 const portfolioItems = [
   {
+    title: 'Pizzaleria',
+    description: 'HTML | Sass | TypeScript | Vite',
+    imageUrl: '/img/pizzaleria.png',
+    imgAlt: 'image of our pizza website',
+    link: 'https://github.com/Medieinstitutet/fed22d-grafiska-verktyg-korsbarstomaterna'
+  },
+  {
     title: 'Doer',
     description: 'HTML | Tailwind CSS | TypeScript | Vite',
     imageUrl: '/img/Doer.png',
@@ -19,16 +26,16 @@ const portfolioItems = [
     title: 'KaffeHörnet',
     description: 'HTML | Sass | JavaScript | Vite',
     imageUrl: './img/kaffeHornet.png',
-    imgAlt: 'image of my coffee corner website',
+    imgAlt: 'image of our coffee corner website',
     link: 'https://redicholas.github.io/KaffeHornet/',
   },
-  {
-    title: 'To the Moon',
-    description: 'HTML | CSS',
-    imageUrl: '../img/to-the-moon.png',
-    imgAlt: 'image of my space ventures website',
-    link: 'https://github.com/Redicholas/space-ventures',
-  },
+  // {
+  //   title: 'To the Moon',
+  //   description: 'HTML | CSS',
+  //   imageUrl: '../img/to-the-moon.png',
+  //   imgAlt: 'image of my space ventures website',
+  //   link: 'https://github.com/Redicholas/space-ventures',
+  // },
 ];
 
 function toggleDarkLight() {
@@ -64,7 +71,7 @@ function showPortfolioItems() {
           ">
           <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
             <img src="${imageUrl}" alt="${imgAlt}" 
-            class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
+            class="opacity-90 rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
             height="100" width="100">
             <p class="text-center text-sm">${description}</p>
         </div>

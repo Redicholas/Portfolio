@@ -58,8 +58,8 @@
       </section>
 
       <!-- About -->
-      <section class="xl:mt-36 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
-        <h2 class="text-center text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
+      <section class="xl:flex flex-col xl:mt-36 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
+        <h2 class="text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
         <p class=" xl:text-xl">
           Hello there! <br />
           I'm Nicholas Peters. I'm a future front-end developer who's currently attending Medieinstitutet in Sweden. 
@@ -67,15 +67,15 @@
           I'm always keen to learn new technologies and improve as a developer.
           Please do not hesitate to get in touch if you have any recommendations or would want to contact me for an idea. 
         </p>
-        <a href="#contact"><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
+        <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
     </div>
 
       <!-- CV Thumbnail -->
-      <section class="xl:flex">
-      <div class="mx-auto flex flex-col justify-center items-center">
-        <h3 class="text-center text-xl xl:text-4xl xl:mb-12">My CV</h3>
+      <section class="xl:flex h-content mb-20">
+      <div class="flex flex-col justify-center items-center mx-auto p-8">
+        <h3 class="text-center text-xl mb-4 xl:text-4xl">CV</h3>
         <button id="cvThumbnail">
-          <img src="/img/cv-img.png" alt="My Cv" class="rounded cursor-zoom-in xl:w-36"
+          <img src="/img/cv-img.png" alt="My Cv" class="rounded cursor-zoom-in xl:w-32"
           height="100" width="100" />
         </button>
       </div>
@@ -83,16 +83,16 @@
       <!-- CV Modal -->
       <div class="hidden fixed z-30 top-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
         <div class="flex align-center mt-2 w-64 px-8 justify-between rounded-t-xl bg-blue1 text-white">
-          <a href="/img/CV-Nicholas-Peters.pdf" class="underline pt-2 hover:text-fire">PDF Link</a>
+          <a href="/img/CV-Nicholas-Peters.pdf" target="_blank" class="underline pt-2 hover:text-fire">PDF Link</a>
           <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-fire text-4xl"></i></button>
         </div>
-        <img src="/img/cv-zoomed.png" alt="My Cv" class="rounded-xl"
+        <img src="/img/cv-img.png" alt="My Cv" class="rounded-xl"
         height="600" width="480" />
       </div>
 
       <!-- Technologies -->
-      <div class="my-16 p-8 rounded-xl max-w-xl mx-auto ">
-        <h3 class="text-center text-xl mb-2 xl:text-4xl xl:mb-12">Technologies</h3>
+      <div class="p-8 rounded-xl max-w-xl mx-auto ">
+        <h3 class="text-center text-xl mb-4 xl:text-4xl">Technologies</h3>
         <div class="text-center flex justify-around gap-24 xl:text-2xl">
           <ul>
             <li>HTML</li>
