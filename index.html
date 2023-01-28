@@ -26,9 +26,9 @@
     <!--  Nav  -->
     <header class="w-screen" id="header">
       <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
-        <div class="flex justify-center items-center p-1 px-4 rounded-full bg-gradient-to-t from-white to-lightGrey
+        <div class="flex justify-center items-center p-1 px-4 rounded-full  bg-lightGrey
          border border-white mx-auto shadow-md shadow-transparentBlack
-         dark:from-[#232A30] dark:to-[#2E373D]">
+         dark:bg-black">
           <a href="#header" class="m-1 transition-all hover:text-skyBlue" tabindex="1">Home</a>
           <a href="#about" class="m-1 transition-all hover:text-skyBlue" tabindex="2">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
@@ -42,7 +42,7 @@
 
     <!-- Hero -->
     <div class="flex flex-col xl:flex-row sm:min-h-screen gap-4 items-center justify-center">
-      <section class="p-8 sm:pt-20 max-w-fit mx-auto">
+      <section class="p-8 sm:pt-16 max-w-fit mx-auto">
         <div class="flex sm:mt-20 justify-between items-center flex-col xl:gap-4">
           <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl
           textAppear invisible">
@@ -52,13 +52,10 @@
             class="h-36 sm:h-56 xl:h-72 rounded-full -z-10 opacity-80" 
             loading="lazy" />
         </div>
-        <!-- <h2 class="pt-8 text-xl sm:text-2xl max-w-md">
-          Creating intuitive and accessible web experiences
-        </h2> -->
       </section>
 
       <!-- About -->
-      <section class="xl:flex flex-col xl:mt-36 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
+      <section class="xl:flex flex-col xl:mt-8 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
         <h2 class="text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
         <p class=" xl:text-xl">
           Hello there! <br />
@@ -68,6 +65,7 @@
           Please do not hesitate to get in touch if you have any recommendations or would want to contact me for an idea. 
         </p>
         <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
+      </section>
     </div>
 
       <!-- CV Thumbnail -->
@@ -81,7 +79,7 @@
         </div>
 
         <!-- CV Modal -->
-        <div class="hidden fixed z-30 top-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
+        <div class="hidden fixed z-30 top-0 left-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
           <div class="flex align-center mt-2 w-64 px-8 justify-between rounded-t-xl bg-dark text-white">
             <a href="/img/CV-Nicholas-Peters.pdf" target="_blank" class="underline pt-2 hover:text-skyBlue">PDF Link</a>
             <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-skyBlue text-4xl"></i></button>
@@ -132,8 +130,8 @@
           <p class="xl:text-xl p-8">
             I am an aspiring front-end developer who is enthusiastic about learning and staying current with the latest technologies in the field. 
             I love working in collaborative environments with people who are as excited about their work as I am about mine.
-            <br /> I am confident in my ability to create high-quality work and exceed expectations, 
-            despite my lack of experience, thanks to my attention to detail, and problem-solving skills.
+            <br />Despite my lack of experience I am confident in my ability to create high-quality work and exceed expectations, 
+            thanks to my attention to detail, and problem-solving skills.
           </p>
         </div>
         <div class="xl:w-1/2">
