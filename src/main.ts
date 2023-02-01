@@ -1,33 +1,33 @@
-import './style.css';
+import "./style.css";
 
 const html = document.documentElement;
-const darkLightBtn: HTMLButtonElement | null = document.querySelector('#darkLight');
-const portfolioItemsDiv: HTMLDivElement | null = document.querySelector('#portfolioItems');
-const cvThumbnail: HTMLImageElement | null = document.querySelector('#cvThumbnail');
-const closeCvModalBtn: HTMLButtonElement | null = document.querySelector('#closeCvModalBtn');
-const cvModal: HTMLDivElement | null = document.querySelector('#cvModal');
+const darkLightBtn: HTMLButtonElement | null = document.querySelector("#darkLight");
+const portfolioItemsDiv: HTMLDivElement | null = document.querySelector("#portfolioItems");
+const cvThumbnail: HTMLImageElement | null = document.querySelector("#cvThumbnail");
+const closeCvModalBtn: HTMLButtonElement | null = document.querySelector("#closeCvModalBtn");
+const cvModal: HTMLDivElement | null = document.querySelector("#cvModal");
 
 const portfolioItems = [
   {
-    title: 'Pizzaleria',
-    description: 'HTML | Sass | TypeScript | Vite',
-    imageUrl: '/img/pizzaleria.png',
-    imgAlt: 'image of our pizza website',
-    link: 'https://github.com/Medieinstitutet/fed22d-grafiska-verktyg-korsbarstomaterna'
+    title: "Pizzaleria",
+    description: "HTML | Sass | TypeScript | Vite",
+    imageUrl: "/img/pizzaleria.png",
+    imgAlt: "image of our pizza website",
+    link: "https://github.com/Medieinstitutet/fed22d-grafiska-verktyg-korsbarstomaterna",
   },
   {
-    title: 'Doer',
-    description: 'HTML | Tailwind CSS | TypeScript | Vite',
-    imageUrl: '/img/Doer.png',
-    imgAlt: 'image of my todo list app',
-    link: 'https://redicholas.github.io/Doer/', 
+    title: "Doer",
+    description: "HTML | Tailwind CSS | TypeScript | Vite",
+    imageUrl: "/img/Doer.png",
+    imgAlt: "image of my todo list app",
+    link: "https://redicholas.github.io/Doer/",
   },
   {
-    title: 'KaffeHörnet',
-    description: 'HTML | Sass | JavaScript | Vite',
-    imageUrl: './img/kaffeHornet.png',
-    imgAlt: 'image of our coffee corner website',
-    link: 'https://redicholas.github.io/KaffeHornet/',
+    title: "KaffeHörnet",
+    description: "HTML | Sass | JavaScript | Vite",
+    imageUrl: "./img/kaffeHornet.png",
+    imgAlt: "image of our coffee corner website",
+    link: "https://redicholas.github.io/KaffeHornet/",
   },
   // {
   //   title: 'To the Moon',
@@ -40,26 +40,26 @@ const portfolioItems = [
 
 function toggleDarkLight() {
   if (html != null) {
-    html.classList.toggle('dark');
+    html.classList.toggle("dark");
   }
 }
 
 function showCvModal() {
   if (cvModal != null) {
-    cvModal.classList.replace('hidden', 'flex');
+    cvModal.classList.replace("hidden", "flex");
   }
 }
 
 function closeCvModal() {
   if (cvModal != null) {
-    cvModal.classList.replace('flex', 'hidden');
+    cvModal.classList.replace("flex", "hidden");
   }
 }
 
 function showPortfolioItems() {
   portfolioItems.forEach((portfolioItem) => {
     const { title, description, imageUrl, imgAlt, link } = portfolioItem;
-    if (portfolioItemsDiv != null) { 
+    if (portfolioItemsDiv != null) {
       portfolioItemsDiv.innerHTML += `
       <a
         href="${link}"
@@ -77,15 +77,16 @@ function showPortfolioItems() {
         </div>
       </a>
       `;
-    }});
+    }
+  });
 }
 
-const hiddenText = document.querySelectorAll('.textAppear');
+const hiddenText = document.querySelectorAll(".textAppear");
 const textObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.remove('invisible');
-      entry.target.classList.add('tracking-in-expand');
+      entry.target.classList.remove("invisible");
+      entry.target.classList.add("tracking-in-expand");
     }
   });
 });
@@ -95,6 +96,6 @@ hiddenText.forEach((element) => {
 });
 
 showPortfolioItems();
-darkLightBtn?.addEventListener('click', toggleDarkLight);
-cvThumbnail?.addEventListener('click', showCvModal);
-closeCvModalBtn?.addEventListener('click', closeCvModal);
+darkLightBtn?.addEventListener("click", toggleDarkLight);
+cvThumbnail?.addEventListener("click", showCvModal);
+closeCvModalBtn?.addEventListener("click", closeCvModal);

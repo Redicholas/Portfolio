@@ -17,24 +17,25 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
     <title>Nicholas Peters Portfolio</title>
   </head>
   
-    <body class="tracking-widest leading-6 text-dark bg-white dark:bg-dark dark:text-white">
+    <body class="tracking-widest leading-6 text-dark bg-[url('/img/bg-gradient-light.png')] dark:text-white dark:bg-[url('/img/bg-gradient-dark.png')] bg-cover bg-fixed">
 
     <!--  Nav  -->
     <header class="w-screen" id="header">
       <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
-        <div class="flex justify-center items-center p-1 px-4 rounded-full  bg-lightGrey
-         border border-white mx-auto shadow-md shadow-transparentBlack
-         dark:bg-black">
-          <a href="#header" class="m-1 transition-all hover:text-skyBlue" tabindex="1">Home</a>
-          <a href="#about" class="m-1 transition-all hover:text-skyBlue" tabindex="2">About</a>
+        <div class="flex justify-center items-center p-1 px-4 rounded-full bg-white
+         border border-black mx-auto shadow-md shadow-transparentBlack
+         dark:bg-black dark:border-white">
+          <a href="#header" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="1">Home</a>
+          <a href="#about" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="2">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
           class="h-20 w-20 sm:h-32 sm:w-32">
-          <a href="#work" class="m-1 transition-all hover:text-skyBlue" tabindex="3">Work</a>
-          <a href="#contact" class="m-1 transition-all hover:text-skyBlue" tabindex="4">Contact</a>
+          <a href="#work" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="3">Work</a>
+          <a href="#contact" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="4">Contact</a>
         </div>
       </nav>
       <button id="darkLight" class="fixed right-4 top-4"><i class="fa-regular fa-lightbulb"></i></button>
@@ -49,7 +50,7 @@
             Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
           </h1>
           <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" 
-            class="h-36 sm:h-56 xl:h-72 rounded-full -z-10 opacity-80" 
+            class="h-36 sm:h-56 xl:h-72 rounded-full z-10 opacity-80" 
             loading="lazy" />
         </div>
       </section>
