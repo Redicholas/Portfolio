@@ -67,7 +67,7 @@ function showPortfolioItems() {
         title="${title}"
         target="_blank">
         <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-transparentBlack
-         sm:hover:bg-transparentBlack dark:sm:hover:bg-transparentWhite  transition-all
+         hover:bg-transparentBlack dark:hover:bg-transparentWhite  transition-all
           ">
           <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
             <img src="${imageUrl}" alt="${imgAlt}" 
@@ -86,7 +86,7 @@ const textObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove("invisible");
-      entry.target.classList.add("tracking-in-expand");
+      entry.target.classList.add("slide-in-bottom");
     }
   });
 });
