@@ -82,12 +82,15 @@ function showPortfolioItems() {
   });
 }
 
-const hiddenText = document.querySelectorAll(".textAppear");
+const hiddenText = document.querySelectorAll(".appear");
 const textObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove("invisible");
       entry.target.classList.add("slide-in-bottom");
+    } else {
+      entry.target.classList.add("invisible");
+      entry.target.classList.remove("slide-in-bottom");
     }
   });
 });

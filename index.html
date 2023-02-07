@@ -22,14 +22,14 @@
     <title>Nicholas Peters Portfolio</title>
   </head>
   
-    <body class="tracking-widest leading-6 text-dark bg-lightGrey dark:text-white dark:bg-black bg-cover bg-fixed">
+    <body class="tracking-widest leading-6 text-dark bg-lightGrey dark:text-lightGrey dark:bg-black bg-cover bg-fixed">
 
     <!--  Nav  -->
     <header class="w-screen" id="header">
       <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
         <div class="flex justify-center items-center p-1 px-4 rounded-full bg-white
          border border-black mx-auto shadow-md shadow-transparentBlack
-         dark:bg-black dark:border-white">
+         dark:bg-black dark:border-lightGrey">
           <a href="#header" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="1">Home</a>
           <a href="#about" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="2">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
@@ -46,7 +46,7 @@
       <section class="p-8 sm:pt-16 max-w-fit mx-auto">
         <div class="flex sm:mt-20 justify-between items-center flex-col xl:gap-4">
           <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl
-          textAppear invisible">
+          appear invisible">
             Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
           </h1>
           <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" 
@@ -56,7 +56,7 @@
       </section>
 
       <!-- About -->
-      <section class="xl:flex flex-col xl:mt-8 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
+      <section class="xl:flex flex-col xl:mt-8 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto appear invisible" id="about">
         <h2 class="text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
         <p class=" xl:text-xl">
           Hello there! <br />
@@ -65,12 +65,12 @@
           I'm always keen to learn new technologies and improve as a developer.
           Please do not hesitate to get in touch if you have any recommendations or would want to contact me for an idea. 
         </p>
-        <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
+        <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn dark:text-dark">Contact</button></a>
       </section>
     </div>
 
       <!-- CV Thumbnail -->
-      <section class="xl:flex h-content  py-32 max-w-2xl mx-auto">
+      <section class="xl:flex h-content  py-32 max-w-2xl mx-auto appear invisible">
         <div class="flex flex-col justify-center items-center mx-auto p-8">
           <h3 class="text-center text-xl mb-4 xl:text-4xl">CV</h3>
           <button id="cvThumbnail">
@@ -116,7 +116,7 @@
 
     <!-- Work -->
     <section class="py-32" id="work">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 appear invisible">
         Some of my work so far.
       </h2>
       <div id="portfolioItems" 
@@ -130,10 +130,10 @@
     <section class="max-w-xl xl:max-w-4xl mx-auto py-32">
       <div class="flex flex-col xl:flex-row xl:gap-20">
         <div class="xl:w-1/2">
-          <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+          <h2 class="text-center text-2xl sm:text-4xl mb-4 appear invisible">
             What I can do for you.
           </h2>
-          <p class="xl:text-xl p-8 textAppear invisible">
+          <p class="xl:text-xl p-8 appear invisible">
             I am an aspiring front-end developer who is enthusiastic about learning and staying current with the latest technologies in the field. 
             I love working in collaborative environments with people who are as excited about their work as I am about mine.
             <br />Despite my lack of experience I am confident in my ability to create high-quality work and exceed expectations, 
@@ -141,10 +141,10 @@
           </p>
         </div>
         <div class="xl:w-1/2">
-          <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+          <h2 class="text-center text-2xl sm:text-4xl mb-4 appear invisible">
             What I am looking for.
           </h2>
-          <p class="xl:text-xl p-8 textAppear invisible">
+          <p class="xl:text-xl p-8 appear invisible">
             Starting from the summer of 2023, I am eager to take on new challenges and use my skills to contribute to the success of your project.
             My solid understanding of HTML, CSS, and JavaScript, combined with my passion for learning and staying up-to-date with the latest technologies, 
             make me a valuable asset to any team.
@@ -157,7 +157,7 @@
 
     <!-- Contact -->
     <section class="py-32 bg-black text-white border-t border-transparentWhite" id="contact">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4 invisible textAppear">Talk to me.</h2>
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 invisible appear">Talk to me.</h2>
       <div class="flex justify-center">
         <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2 hover:text-skyBlue transition-all"></i>
         <a href="https://github.com/Redicholas"><i class="fa-brands fa-github p-2 hover:text-skyBlue transition-all"></i></a>
