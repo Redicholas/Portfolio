@@ -66,7 +66,7 @@ function showPortfolioItems() {
         loading="lazy"
         title="${title}"
         target="_blank">
-        <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border dark:border-transparentWhite
+        <div class="rounded-xl max-w-md mb-10 mx-auto p-4 border dark:border-transparentWhite
         border-transparentBlack
          hover:bg-transparentBlack dark:hover:bg-transparentWhite  transition-all
           ">
