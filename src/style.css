@@ -2,27 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .shine {
-    background: linear-gradient(
-      90deg,
-      #020e26 0%,
-      #40dde6 70%,
-      #fff 75%,
-      #579be4 80%,
-      #020e26 90%
-    );
-    background-size: 300% auto;
-
-    color: #000;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: shine 12s linear infinite;
-  }
-}
-
 * {
   scroll-behavior: smooth;
 }
@@ -43,11 +22,11 @@ p {
   font-weight: 300;
 }
 
-.shadow-btn {
+.glow-btn {
   padding: 10px 20px;
   border: none;
   font-size: 17px;
-  color: #fff;
+  color: #222120;
   border-radius: 7px;
   letter-spacing: 4px;
   font-weight: 700;
@@ -56,24 +35,26 @@ p {
   transition-property: box-shadow;
 }
 
-.shadow-btn {
-  background: #40dde6;
-  box-shadow: 0 0 5px #40dde6;
+.glow-btn {
+  background: #f4ca62;
+  box-shadow: 0 0 5px #f4ca62;
 }
 
-.shadow-btn:hover {
-  box-shadow: 0 0 5px #40dde6, 0 0 5px rgba(0, 140, 255, 07), 0 0 15px #40dde6,
-    0 0 25px #40dde6;
+.glow-btn:hover {
+  box-shadow: 0 0 5px #f4ca62, 0 0 5px rgba(0, 140, 255, 07), 0 0 15px #f4ca62,
+    0 0 25px #f4ca62;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
 }
 
 #heading {
-  background: linear-gradient(
-    90deg,
-    #020e26 0%,
-    #40dde6 70%,
-    #579be4 80%,
-    #020e26 90%
-  );
+  background: linear-gradient(90deg, #222120 0%, #f4ca62 50%, #222120 99%);
   background-size: 300% auto;
 
   color: #000;
@@ -88,12 +69,4 @@ p {
   to {
     background-position: -300% center;
   }
-}
-
-.hide {
-  opacity: 0;
-}
-
-.show {
-  opacity: 1;
 }
