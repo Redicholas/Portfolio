@@ -53,6 +53,13 @@ p {
   opacity: 1;
 }
 
+.glass {
+  background: rgba(66, 66, 66, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(11.7px);
+}
+
 #heading {
   background: linear-gradient(90deg, #222120 0%, #f4ca62 50%, #222120 99%);
   background-size: 300% auto;
