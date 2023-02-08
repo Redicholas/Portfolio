@@ -65,13 +65,16 @@ function showPortfolioItems() {
         href="${link}"
         loading="lazy"
         title="${title}"
-        target="_blank">
-        <div class="rounded-xl max-w-md mx-auto mb-10 p-4 border border-transparentBlack
-         hover:bg-transparentBlack dark:hover:bg-transparentWhite  transition-all
+        target="_blank"
+        class=""
+        >
+        <div class="rounded-xl max-w-md mb-10 mx-auto p-4 border dark:border-transparentWhite
+        border-transparentBlack -z-10 fade-in transition-all duration-300
+         hover:bg-transparentBlack dark:hover:bg-transparentWhite
           ">
           <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
             <img src="${imageUrl}" alt="${imgAlt}" 
-            class="opacity-90 rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack"
+            class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack relative -z-10"
             height="100" width="100">
             <p class="text-center text-sm">${description}</p>
         </div>
@@ -81,18 +84,21 @@ function showPortfolioItems() {
   });
 }
 
-const hiddenText = document.querySelectorAll(".textAppear");
-const textObserver = new IntersectionObserver((entries) => {
+const hidden = document.querySelectorAll(".fade-in");
+const Observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.remove("invisible");
-      entry.target.classList.add("slide-in-bottom");
+      entry.target.classList.remove("hide");
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+      entry.target.classList.add("hide");
     }
   });
 });
 
-hiddenText.forEach((element) => {
-  textObserver.observe(element);
+hidden.forEach((element) => {
+  Observer.observe(element);
 });
 
 showPortfolioItems();

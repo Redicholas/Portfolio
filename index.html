@@ -22,14 +22,13 @@
     <title>Nicholas Peters Portfolio</title>
   </head>
   
-    <body class="tracking-widest leading-6 text-dark bg-[url('/img/bg-gradient-light.png')] dark:text-white dark:bg-[url('/img/bg-gradient-dark.png')] bg-cover bg-fixed">
+    <body class="tracking-widest leading-6 text-dark bg-lightGrey dark:text-lightGrey dark:bg-black bg-cover bg-fixed px-2">
 
     <!--  Nav  -->
-    <header class="w-screen" id="header">
       <nav class="fixed bottom-6 sm:top-0 h-16 sm:h-20 sm:mt-10 w-screen p-2 z-20 flex justify-between">
         <div class="flex justify-center items-center p-1 px-4 rounded-full bg-white
          border border-black mx-auto shadow-md shadow-transparentBlack
-         dark:bg-black dark:border-white">
+         dark:bg-black dark:border-lightGrey">
           <a href="#header" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="1">Home</a>
           <a href="#about" class="m-1 transition-all hover:text-skyBlue hover:border-b border-skyBlue" tabindex="2">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
@@ -39,38 +38,36 @@
         </div>
       </nav>
       <button id="darkLight" class="fixed right-4 top-4"><i class="fa-regular fa-lightbulb"></i></button>
-    </header>
 
     <!-- Hero -->
     <div class="flex flex-col xl:flex-row sm:min-h-screen gap-4 items-center justify-center">
       <section class="p-8 sm:pt-16 max-w-fit mx-auto">
         <div class="flex sm:mt-20 justify-between items-center flex-col xl:gap-4">
-          <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl
-          textAppear invisible">
+          <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl">
             Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
           </h1>
           <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" 
-            class="h-36 sm:h-56 xl:h-72 rounded-full z-10 opacity-80" 
+            class="h-36 sm:h-56 xl:h-72 rounded-full z-10 opacity-90" 
             loading="lazy" />
         </div>
       </section>
 
       <!-- About -->
-      <section class="xl:flex flex-col xl:mt-8 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto" id="about">
+      <section class="xl:flex flex-col xl:mt-8 xl:pr-24 px-8 sm:px-0 py-8 max-w-xl mx-auto fade-in transition-all duration-1000" id="about">
         <h2 class="text-2xl sm:text-4xl mb-4 xl:text-5xl">A little about me.</h2>
         <p class=" xl:text-xl">
           Hello there! <br />
           I'm Nicholas Peters. I'm a future front-end developer who's currently attending Medieinstitutet in Sweden. 
-          In the fall of 2023, I'm looking forward to beginning my first period of apprenticeship and getting some practical work experience. 
+          In the fall of 2023, I'm looking forward to beginning my first internship period and getting some practical work experience. 
           I'm always keen to learn new technologies and improve as a developer.
           Please do not hesitate to get in touch if you have any recommendations or would want to contact me for an idea. 
         </p>
-        <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn">Contact</button></a>
+        <a href="#contact" class=""><button class="py-4 px-12 mt-12 shadow-btn dark:text-dark">Contact</button></a>
       </section>
     </div>
 
       <!-- CV Thumbnail -->
-      <section class="xl:flex h-content mb-20 max-w-2xl mx-auto">
+      <section class="xl:flex h-content sm:py-32 max-w-2xl mx-auto fade-in transition-all duration-1000">
         <div class="flex flex-col justify-center items-center mx-auto p-8">
           <h3 class="text-center text-xl mb-4 xl:text-4xl">CV</h3>
           <button id="cvThumbnail">
@@ -80,18 +77,18 @@
         </div>
 
         <!-- CV Modal -->
-        <div class="hidden fixed z-30 top-0 left-0 h-screen w-screen bg-transparentBlack flex-col justify-center items-center" id="cvModal">
-          <div class="flex align-center mt-2 w-72 px-8 justify-between rounded-t-xl bg-dark text-white">
+        <div class="hidden fixed z-40 top-0 left-0 h-screen w-screen bg-black flex-col justify-center items-center" id="cvModal">
+          <div class="flex z-30 mt-2 w-72 px-8 py-2 justify-between align-middle rounded-t-xl bg-dark text-white ">
             <a href="/img/CV-Nicholas-Peters.pdf" target="_blank" class="underline pt-2 hover:text-skyBlue">PDF</a>
             <a href="/img/CV-Nicholas-Peters-bw.pdf" target="_blank" class="underline pt-2 hover:text-skyBlue">Print Version</a>
-            <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-skyBlue text-4xl"></i></button>
+            <button class="" id="closeCvModalBtn"><i class="fa-solid fa-xmark text-white hover:text-fire text-4xl"></i></button>
           </div>
           <img src="/img/cv-img.png" alt="My Cv" class="rounded-xl"
           height="600" width="480" />
         </div>
 
         <!-- Technologies -->
-        <div class="p-8 rounded-xl max-w-xl mx-auto ">
+        <div class="p-8 rounded-xl max-w-xl mx-auto fade-in transition-all duration-1000">
           <h3 class="text-center text-xl mb-4 xl:text-4xl">Technologies</h3>
           <div class="text-center flex justify-around gap-24 xl:text-2xl">
             <ul>
@@ -99,48 +96,52 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>Sass</li>
+              <li>React</li>
+              <li>Vue</li>
             </ul>
             <ul>
               <li>TypeScript</li>
               <li>Tailwind</li>
               <li>Vite</li>
               <li>GitHub</li>
+              <li>Jest</li>
+              <li>Cypress</li>
             </ul>
           </div>
         </div>
     </section>
 
     <!-- Work -->
-    <section class="" id="work">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+    <section class="py-32" id="work">
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 relative -z-10 fade-in transition-all duration-1000">
         Some of my work so far.
       </h2>
       <div id="portfolioItems" 
-        class="flex flex-col justify-center p-8 
+        class="flex flex-col justify-center 
         sm:grid grid-cols-3 gap-6 max-w-4xl mx-auto">
         <!-- Rendered by TS -->
       </div>
     </section>
 
     <!-- Info -->
-    <section class="max-w-xl xl:max-w-4xl mx-auto">
+    <section class="max-w-xl xl:max-w-4xl mx-auto sm:py-32">
       <div class="flex flex-col xl:flex-row xl:gap-20">
-        <div class="xl:w-1/2">
-          <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+        <div class="xl:w-1/2 fade-in transition-all duration-1000">
+          <h2 class="text-center text-2xl sm:text-4xl mb-4 ">
             What I can do for you.
           </h2>
-          <p class="xl:text-xl p-8">
+          <p class="xl:text-xl p-8 ">
             I am an aspiring front-end developer who is enthusiastic about learning and staying current with the latest technologies in the field. 
             I love working in collaborative environments with people who are as excited about their work as I am about mine.
             <br />Despite my lack of experience I am confident in my ability to create high-quality work and exceed expectations, 
             thanks to my attention to detail, and problem-solving skills.
           </p>
         </div>
-        <div class="xl:w-1/2">
-          <h2 class="text-center text-2xl sm:text-4xl mb-4 textAppear invisible">
+        <div class="xl:w-1/2 fade-in transition-all duration-1000">
+          <h2 class="text-center text-2xl sm:text-4xl mb-4 ">
             What I am looking for.
           </h2>
-          <p class="xl:text-xl p-8">
+          <p class="xl:text-xl p-8 ">
             Starting from the summer of 2023, I am eager to take on new challenges and use my skills to contribute to the success of your project.
             My solid understanding of HTML, CSS, and JavaScript, combined with my passion for learning and staying up-to-date with the latest technologies, 
             make me a valuable asset to any team.
@@ -152,8 +153,8 @@
     </section>
 
     <!-- Contact -->
-    <section class="p-10 pb-20 bg-black text-white" id="contact">
-      <h2 class="text-center text-2xl sm:text-4xl mb-4 invisible textAppear">Talk to me.</h2>
+    <section class="py-32 bg-black text-white border-t border-transparentWhite fade-in transition-all duration-1000" id="contact">
+      <h2 class="text-center text-2xl sm:text-4xl mb-4 ">Talk to me.</h2>
       <div class="flex justify-center">
         <a href="mailto:peters.nicholas@gmail.com"><i class="fa-solid fa-envelope p-2 hover:text-skyBlue transition-all"></i>
         <a href="https://github.com/Redicholas"><i class="fa-brands fa-github p-2 hover:text-skyBlue transition-all"></i></a>
