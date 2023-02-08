@@ -90,24 +90,10 @@ p {
   }
 }
 
-.appear {
-  -webkit-animation: appear 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: appear 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.hide {
+  opacity: 0;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.show {
+  opacity: 1;
 }
