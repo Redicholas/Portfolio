@@ -17,7 +17,7 @@ module.exports = {
       lazerBlue: "#40dde6",
       transparentBlack: "#00000033",
       transparentWhite: "#ffffff33",
-      yellow: "#F4CA62",
+      yellow: "#F9D47A",
       greyblack: "#222120",
       beige: "#EAE6D4",
       yellowbeige: "#EBE2BE",

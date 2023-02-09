@@ -36,13 +36,13 @@ p {
 }
 
 .glow-btn {
-  background: #f4ca62;
-  box-shadow: 0 0 5px #f4ca62;
+  background: #f9d47a;
+  box-shadow: 0 0 5px #f9d47a;
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 5px #f4ca62, 0 0 5px rgba(0, 140, 255, 07), 0 0 15px #f4ca62,
-    0 0 25px #f4ca62;
+  box-shadow: 0 0 5px #f9d47a, 0 0 5px rgba(0, 140, 255, 07), 0 0 15px #f9d47a,
+    0 0 25px #f9d47a;
 }
 
 .hide {
@@ -61,7 +61,7 @@ p {
 }
 
 #heading {
-  background: linear-gradient(90deg, #222120 0%, #f4ca62 50%, #222120 99%);
+  background: linear-gradient(90deg, #222120 0%, #f9d47a 50%, #222120 99%);
   background-size: 300% auto;
 
   color: #000;
