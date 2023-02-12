@@ -10,7 +10,7 @@ const cvModal: HTMLDivElement | null = document.querySelector("#cvModal");
 const portfolioItems = [
   {
     title: "Pizzaleria",
-    description: "HTML | Sass | TypeScript | Vite",
+    description: "Team project, code a given design. <br /> HTML | Sass | JavaScript",
     imageUrl: "/img/pizzaleria.png",
     imgAlt: "image of our pizza website",
     repoLink: "https://github.com/Medieinstitutet/fed22d-grafiska-verktyg-korsbarstomaterna",
@@ -18,7 +18,7 @@ const portfolioItems = [
   },
   {
     title: "Doer",
-    description: "HTML | Tailwind CSS | TypeScript | Vite",
+    description: "Solo project, todo-list. <br /> HTML | Tailwind | TypeScript",
     imageUrl: "/img/Doer.png",
     imgAlt: "image of my todo list app",
     repoLink: "https://github.com/Redicholas/Doer",
@@ -26,7 +26,7 @@ const portfolioItems = [
   },
   {
     title: "KaffeHörnet",
-    description: "HTML | Sass | JavaScript | Vite",
+    description: "Team project, code a web-shop. <br /> HTML | Sass | JavaScript",
     imageUrl: "./img/kaffeHornet.png",
     imgAlt: "image of our coffee corner website",
     repoLink: "https://github.com/Redicholas/KaffeHornet",
@@ -66,9 +66,11 @@ function showPortfolioItems() {
           class="rounded-xl m-auto mb-4 w-full max-w-xs border border-transparentBlack relative"
           height="100" width="100">
           <p class="text-center text-sm">${description}</p>
-          <div class="flex justify-around mt-4 relative">
-            <a href="${repoLink}" target="_blank" title="Link to the GitHub Repository" class="border dark:border-transparentWhite border-transparentBlack  px-6 py-1 rounded hover:bg-yellow hover:text-greyblack transition-all"/>Repo</a>
-            <a href="${liveLink}" target="_blank" title="Link to the live site"  class="border dark:border-transparentWhite border-transparentBlack  px-6 py-1 rounded hover:bg-yellow hover:text-greyblack transition-all"/>Live</a>
+          <div class="flex justify-around mt-4">
+            <a href="${repoLink}" target="_blank" title="Link to the GitHub Repository" class="border dark:border-transparentWhite
+            border-transparentBlack  px-6 py-1 rounded hover:bg-yellow hover:text-greyblack transition-all"/>Repo</a>
+            <a href="${liveLink}" target="_blank" title="Link to the live site"  class="border dark:border-transparentWhite
+            border-transparentBlack  px-6 py-1 rounded hover:bg-yellow hover:text-greyblack transition-all"/>Live</a>
           </div>
       </div>
       `;
