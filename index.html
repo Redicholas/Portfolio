@@ -29,21 +29,23 @@
         <div class="flex justify-center items-center p-1 px-4 rounded-full 
          border border-black mx-auto shadow-md shadow-transparentBlack glass
           dark:border-beige text-beige">
-          <a href="#header" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="1">Home</a>
-          <a href="#about" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="2">About</a>
+          <a href="#header" aira-label="Home" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="1">Home</a>
+          <a href="#about" aira-label="About" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="2">About</a>
           <img src="/img/logo.svg" alt="Logo" height="75" width="75"
           class="h-20 w-20 sm:h-32 sm:w-32">
-          <a href="#work" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="3">Work</a>
-          <a href="#contact" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="4">Contact</a>
+          <a href="#work" aira-label="Work" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="3">Work</a>
+          <a href="#contact" aira-label="Contact" class="m-1 transition-all hover:border-b-2 border-yellow" tabindex="4">Contact</a>
         </div>
       </nav>
-      <button id="darkLight" class="fixed right-4 top-4"><i class="fa-regular fa-lightbulb"></i></button>
+      <button id="darkLight" aria-label="Toggle dark/light mode" title="Toggle dark/light mode" class="fixed right-4 top-4">
+        <i class="fa-regular fa-lightbulb"></i>
+      </button>
 
     <!-- Landing -->
     <div class="flex flex-col xl:flex-row sm:min-h-screen gap-4 items-center justify-center">
       <section class="p-8 sm:pt-16 max-w-fit mx-auto">
         <div class="flex sm:mt-20 justify-between items-center flex-col xl:gap-4">
-          <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl text-greyblack dark:text-yellow">
+          <h1 id="heading" class="text-5xl sm:text-6xl xl:text-8xl">
             Nicholas:<br />&nbsp;&nbsp;Front End<br />&nbsp;&nbsp;Developer
           </h1>
           <img src="img/nicholas-peters.png" alt="Profile Image of Nicholas Peters" 
@@ -62,7 +64,7 @@
           I'm always keen to learn new technologies and improve as a developer. <br />
           Please do not hesitate to get in touch if you have any recommendations or would want to contact me with an idea you would want to collaborate on. 
         </p>
-        <a href="#contact" class=""><button class="py-4 px-12 mt-12 glow-btn">Contact</button></a>
+        <a href="#contact" class=""><button title="Contact" aria-label="Go to contact section" class="py-4 px-12 mt-12 glow-btn">Contact</button></a>
       </section>
     </div>
 
