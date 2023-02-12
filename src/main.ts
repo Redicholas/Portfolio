@@ -68,9 +68,9 @@ function showPortfolioItems() {
         target="_blank"
         class=""
         >
-        <div class="rounded-xl max-w-md mb-10 mx-auto p-4 border dark:border-transparentWhite
+        <div class="rounded-xl max-w-md mx-auto p-4 border dark:border-transparentWhite
         border-transparentBlack -z-10 fade-in transition-all duration-300
-         hover:bg-transparentBlack dark:hover:bg-transparentWhite dark:bg-greyblack bg-yellowbeige
+         hover:bg-transparentBlack dark:hover:bg-transparentWhite dark:bg-greyblack bg-transparentWhite
           ">
           <h3 class="text-center mb-2 text-2xl h-16">${title}</h3>
             <img src="${imageUrl}" alt="${imgAlt}" 
